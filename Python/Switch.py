@@ -11,7 +11,6 @@ class Switch:
 
         print ("--- Active Interfaces ---")          
      
-
 class Interface:
     # Interface Object
     def __init__(interface, name, ip, mask):
