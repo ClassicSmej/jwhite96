@@ -1,6 +1,6 @@
 ### Hi there, I'm James 👋
 
-I’m a final year Cyber Security student at the University of Plymouth. I have a solid understanding of networking and have been working towards the Cisco CCNA Certification for a few years. During my studies I have learnt many different programming languages such as C#, Java, JavaScript, PHP, CSS & HTML. I'm currently learning to program in Python to better understand Software Defined Networking.
+A final year Cyber Security student at the University of Plymouth with a passion for networking and web development. Familar with a wide range of programming languages including C#, Java and Python as well as experience with technologies such as Django, Amazon Web Services and Apache. Currently imporivng my skills with Python and the Django Web Development Framework.
 
 Please feel free to take a look my repositories :smiley:
 
