@@ -4,7 +4,7 @@ A final year Cyber Security student at the University of Plymouth with a passion
 
 Familar with a wide range of programming languages including C#, Java and Python as well as experience with technologies such as Django, Amazon Web Services and Apache.
 
-Currently improivng my skills with Python and the Django Web Development Framework.
+Currently improving my skills with Python Web Development Frameworks such as Django and Flask.
 
 Please feel free to take a look my repositories :smiley:
 
