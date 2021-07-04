@@ -1,0 +1,22 @@
+/* Custom Stylesheet */
+
+html, main, body {
+    height: 100%;
+    margin: 0;
+}
+
+#carousel {
+    height: 50vh;
+    color: white;
+}
+
+#carousel-item {
+    height: 100%;
+    align-content: center;
+}
+
+#carousel-text {
+    margin: auto;
+    width: 50%;
+    border: solid black 1px;
+}

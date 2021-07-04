@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+            <div id="carousel-item" class="carousel-item bg-danger active">
+                <div id="carousel-text">
+                    <h1>Cyber Security</h1>
+                </div>
+            </div>
+            <div id="carousel-item" class="carousel-item bg-success">
+                <div id="carousel-text">
+                    <h1>Networking</h1>
+                </div>
+            </div>
+            <div id="carousel-item" class="carousel-item bg-info">
+                <div id="carousel-text">
+                    <h1>Programming</h1>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="row container-fluid h-100">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8 bg-dark">
+
+
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+
+{% endblock %}
