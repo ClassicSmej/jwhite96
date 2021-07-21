@@ -3,20 +3,170 @@
 html, main, body {
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-#carousel {
-    height: 50vh;
+a:link {
+    color: #f26a22;
+    text-decoration: none;
+}
+
+/* Navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 30px 50px;
+    z-index: 1;
+}
+
+#nav-link {
     color: white;
+    font-size: 16px;
+    padding: 2vh;
+    font-weight: 500;
 }
 
-#carousel-item {
-    height: 100%;
-    align-content: center;
+#nav-link:hover {
+    color: #f26a22;
 }
 
-#carousel-text {
-    margin: auto;
-    width: 50%;
-    border: solid black 1px;
+/* Buttons */
+#button {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    border: none;
+    padding: 8px 20px;
+    margin-top: 20px;
+    background-color: #f26a22;
+}
+
+#button:hover {
+    background-color: #ef4d24;
+}
+
+/* Home Section */
+#home {
+    background-image: url("../images/vector.png");
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+#intro {
+    top: 0;
+    width: 67%;
+    position: absolute;
+    padding-top: 18vh;
+    padding-left: 30vw;
+    text-align: left;
+}
+
+#intro-heading {
+    color: white;
+    font-size: 52px;
+    font-weight: 750;
+    cursor: text;
+    line-height: 7vh;
+}
+
+#intro-text {
+    color: white;
+    font-size: 18px;
+    font-weight: 750;
+    cursor: text;
+    margin-top: 2vh;
+}
+
+/* Section Headings */
+#heading {
+    color: white;
+    text-align: center;
+    padding: 5vh;
+    font-size: 52px;
+    font-weight: 750;
+}
+
+/* About Section */
+#about {
+    background-image: url("../images/vector.png");
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#bio-heading {
+    color: #f26a22;
+    font-size: 28px;
+    font-weight: 750;
+    border-bottom: solid 2px #f26a22
+}
+
+#bio-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bio-col img {
+    border-radius: 24px;
+    display: inline-block;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    height: 400px;
+    width: 400px;
+}
+
+#bio-content {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: text;
+    background-color: #202236;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 12px;
+    padding: 5vh;
+}
+
+
+#table-container {
+    padding-left: 5vh;
+    padding-right: 3vh;
+}
+
+#table {
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    border-top: solid 2px #6c757d;
+    border-bottom: solid 2px #6c757d;
+    color: #343a40;
+    font-size: 18px;
+    font-weight: 750;
+    display: inline-block;
+}
+
+#table td {
+    padding-right: 5vh;
+}
+
+/* Skills Section */
+#skills {
+    background-image: url("../images/vector.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }

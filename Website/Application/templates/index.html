@@ -1,47 +1,86 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block body %}
 
-    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner h-100">
-            <div id="carousel-item" class="carousel-item bg-danger active">
-                <div id="carousel-text">
-                    <h1>Cyber Security</h1>
-                </div>
+    <div id="home">
+        <!-- Navbar -->
+        <nav id="navbar">
+            <div id="nav-items">
+                <a id="nav-link" href="#about">About</a>
+                <a id="nav-link" href="#skills">Skills</a>
+                <a id="nav-link" href="#work">Work</a>
+                <a id="nav-link" href="#projects">Projects</a>
             </div>
-            <div id="carousel-item" class="carousel-item bg-success">
-                <div id="carousel-text">
-                    <h1>Networking</h1>
-                </div>
+        </nav>
+        <div id="intro">
+            <div id="intro-heading">
+                <label id="intro-welcome">Hi there, I am</label><br>
+                <label style="color: #f26a22;">James White</label>
             </div>
-            <div id="carousel-item" class="carousel-item bg-info">
-                <div id="carousel-text">
-                    <h1>Programming</h1>
-                </div>
+            <div id="intro-text">Recent Cyber Security graduate and aspiring Python & Django
+                developer.<br>You can learn more about me in this website. Enjoy!
             </div>
+            <button id="button" onclick="document.location='#about'">ABOUT ME</button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
 
-    <div class="row container-fluid h-100">
-        <div class="col-2">
+    <div id="about">
+        <div class="row h-100">
+            <div id="bio-col" class="col">
+                <div style="padding: 5vh;">
+                    <img src="{% static 'images/profile.png' %}" alt="Not Found">
+                </div>
+                <div id="bio" style="width: 40%">
+                    <div id="bio-content">
+                        <div id="bio-heading">
+                            About Me
+                        </div>
+                        <p style="padding-top: 2vh">
+                            <label style="font-size: 20px; font-weight: 750">I'm James, a Cyber Security graduate from
+                                the University of
+                                Plymouth currently looking to secure roles in Python and Django Development.</label>
+                            <br><br>
+                            I've been working in logistics for over eight years but wanted more of challenge for my
+                            future
+                            career. That's when I stumbled across Cisco Networking and it immediately sparked my
+                            interest. I
+                            self-taught myself the CCNA syllabus and passed the Cisco CCENT exam before
+                            university.
+                            <br><br>
+                            Not going to lie, at the start of my degree I hated programming! I just couldn't get my head
+                            around it. Until one day I was fighting with ... uhh I mean building a Java application and
+                            it all just clicked. For the first time I enjoyed programming and wanted to learn more.
+                            <br><br>
+                            During my final year I loved working with Python and Django to build websites. I
+                            self-studied
+                            <label style="color: #f26a22; font-weight: 750">Python, HTML, CSS, JS, Jquery and the Django
+                                Web Framework</label> and have since built multiple Django
+                            sites for myself including my final year project (<a
+                                href="http://ec2-18-169-21-1.eu-west-2.compute.amazonaws.com" target="_blank">NetManager</a>) and this
+                            site.<br>
+                        </p>
+                    </div>
+                </div>
 
+            </div>
         </div>
-        <div class="col-8 bg-dark">
+    </div>
 
-
+    <div id="skills">
+        <div id="heading">
+            Skills
         </div>
-        <div class="col-2">
+    </div>
 
+    <div id="work">
+        <div id="heading">
+            Work Experience
+        </div>
+    </div>
+
+    <div id="projects">
+        <div id="heading">
+            Projects
         </div>
     </div>
 
