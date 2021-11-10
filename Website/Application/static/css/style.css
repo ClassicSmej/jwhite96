@@ -5,10 +5,11 @@ html, main, body {
     margin: 0;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: Arial !important;
 }
 
 a:link {
-    color: #f26a22;
+    color: white;
     text-decoration: none;
 }
 
@@ -25,33 +26,34 @@ a:link {
 #nav-link {
     color: white;
     font-size: 16px;
-    padding: 2vh;
-    font-weight: 500;
+    padding: 4vh;
+    font-weight: bold;
 }
 
 #nav-link:hover {
-    color: #f26a22;
+    color: #FFFF4F;
 }
 
 /* Buttons */
 #button {
-    color: white;
+    color: #FC3A79;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
     border: none;
     padding: 8px 20px;
     margin-top: 20px;
-    background-color: #f26a22;
+    background-color: #FFFF4F;
 }
 
 #button:hover {
-    background-color: #ef4d24;
+    background-color: #FC3A79;
+    color: #FFFF4F;
 }
 
 /* Home Section */
 #home {
-    background-image: url("../images/vector.png");
+    background-image: url("../images/synthwave.png");
     width: 100%;
     height: 100vh;
     position: relative;
@@ -61,13 +63,21 @@ a:link {
     z-index: 1;
 }
 
+#bg-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
 #intro {
     top: 0;
     width: 67%;
-    position: absolute;
+    position: fixed;
     padding-top: 18vh;
     padding-left: 30vw;
     text-align: left;
+    z-index: -1;
 }
 
 #intro-heading {
@@ -97,20 +107,21 @@ a:link {
 
 /* About Section */
 #about {
-    background-image: url("../images/vector.png");
+    background-color: #170829;
     width: 100%;
     height: 100vh;
     position: relative;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 #bio-heading {
-    color: #f26a22;
+    color: #FFFF4F;
     font-size: 28px;
     font-weight: 750;
-    border-bottom: solid 2px #f26a22
+    border-bottom: solid 2px #FFFF4F;
 }
 
 #bio-col {
@@ -124,8 +135,8 @@ a:link {
     display: inline-block;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    width: 350px;
 }
 
 #bio-content {
@@ -133,37 +144,25 @@ a:link {
     font-size: 18px;
     font-weight: 500;
     cursor: text;
-    background-color: #202236;
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 12px;
     padding: 5vh;
 }
 
-
-#table-container {
-    padding-left: 5vh;
-    padding-right: 3vh;
-}
-
-#table {
-    padding-top: 4vh;
-    padding-bottom: 5vh;
-    border-top: solid 2px #6c757d;
-    border-bottom: solid 2px #6c757d;
-    color: #343a40;
-    font-size: 18px;
-    font-weight: 750;
-    display: inline-block;
-}
-
-#table td {
-    padding-right: 5vh;
-}
-
 /* Skills Section */
 #skills {
-    background-image: url("../images/vector.png");
+    background-image: url("../images/synthwave.png");
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Work Section */
+#work {
+    background-image: url("");
     height: 100vh;
     width: 100%;
     background-size: cover;
