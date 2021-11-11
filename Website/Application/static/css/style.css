@@ -60,7 +60,6 @@ a:link {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    z-index: 1;
 }
 
 #bg-bottom {
@@ -73,11 +72,10 @@ a:link {
 #intro {
     top: 0;
     width: 67%;
-    position: fixed;
+    position: absolute;
     padding-top: 18vh;
     padding-left: 30vw;
     text-align: left;
-    z-index: -1;
 }
 
 #intro-heading {
@@ -114,7 +112,6 @@ a:link {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    z-index: 1;
 }
 
 #bio-heading {
@@ -160,9 +157,13 @@ a:link {
     background-repeat: no-repeat;
 }
 
+#skills-col {
+    
+}
+
 /* Work Section */
 #work {
-    background-image: url("");
+    background-color: #170829;
     height: 100vh;
     width: 100%;
     background-size: cover;
