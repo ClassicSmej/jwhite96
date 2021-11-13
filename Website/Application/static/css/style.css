@@ -15,17 +15,15 @@ a:link {
 
 /* Navbar */
 #navbar {
-    position: fixed;
     top: 0;
     width: 100%;
     text-align: center;
-    padding: 30px 50px;
-    z-index: 1;
+    padding: 4vh 4vh 0vh 4vh;
 }
 
 #nav-link {
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     padding: 4vh;
     font-weight: bold;
 }
@@ -34,21 +32,11 @@ a:link {
     color: #FFFF4F;
 }
 
-/* Buttons */
-#button {
-    color: #FC3A79;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 12px;
-    border: none;
-    padding: 8px 20px;
-    margin-top: 20px;
-    background-color: #FFFF4F;
-}
-
-#button:hover {
-    background-color: #FC3A79;
+#nav-link-active {
     color: #FFFF4F;
+    font-size: 18px;
+    padding: 4vh;
+    font-weight: bold;
 }
 
 /* Home Section */
@@ -72,10 +60,11 @@ a:link {
 #intro {
     top: 0;
     width: 67%;
-    position: absolute;
-    padding-top: 18vh;
+    position: fixed;
+    padding-top: 16vh;
     padding-left: 30vw;
     text-align: left;
+    pointer-events: none;
 }
 
 #intro-heading {
@@ -94,11 +83,28 @@ a:link {
     margin-top: 2vh;
 }
 
+#intro-button {
+    color: #FC3A79;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 12px;
+    border: none;
+    padding: 8px 20px;
+    margin-top: 20px;
+    background-color: #FFFF4F;
+    pointer-events: auto;
+}
+
+#intro-button:hover {
+    background-color: #FC3A79;
+    color: #FFFF4F;
+}
+
 /* Section Headings */
 #heading {
-    color: white;
+    color: #FFFF4F;
     text-align: center;
-    padding: 5vh;
+    padding-top: 10vh;
     font-size: 52px;
     font-weight: 750;
 }
@@ -163,11 +169,14 @@ a:link {
     justify-content: center;
 }
 
+
+
 /* Work Section */
 #work {
     background-color: #170829;
-    height: 100vh;
     width: 100%;
+    height: 100vh;
+    position: relative;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;

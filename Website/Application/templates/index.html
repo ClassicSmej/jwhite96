@@ -6,7 +6,7 @@
         <!-- Navbar -->
         <nav id="navbar">
             <div id="nav-items">
-                <a id="nav-link" href="#intro">Home</a>
+                <a id="nav-link-active" href="#home">Home</a>
                 <a id="nav-link" href="#about">About</a>
                 <a id="nav-link" href="#skills">Skills</a>
                 <a id="nav-link" href="#work">Work</a>
@@ -19,12 +19,21 @@
                 <label style="color: #FFFF4F;">James White</label>
             </div>
             <div id="intro-text">Some Text Here</div>
-            <button id="button" onclick="document.location='#about'">ABOUT ME</button>
+            <button id="intro-button" onclick="document.location='#about'">ABOUT ME</button>
         </div>
         <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
 
     <div id="about">
+        <nav id="navbar">
+            <div id="nav-items">
+                <a id="nav-link" href="#home">Home</a>
+                <a id="nav-link-active" href="#about">About</a>
+                <a id="nav-link" href="#skills">Skills</a>
+                <a id="nav-link" href="#work">Work</a>
+                <a id="nav-link" href="#projects">Projects</a>
+            </div>
+        </nav>
         <div class="row h-100">
             <div id="bio-col" class="col">
                 <div style="padding: 5vh;">
@@ -61,9 +70,9 @@
     </div>
 
     <div id="skills">
-        <div class="row h-100">
-            <div id=skills-col class="col">
-                Some text here
+        <div id=skills-container>
+            <div id="skills-row" class="row h-100">
+                
             </div>
         </div>
         <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
