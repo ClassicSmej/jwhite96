@@ -67,37 +67,41 @@ a:link {
     pointer-events: none;
 }
 
+#intro-text {
+    padding-left: 2vh;
+    border-left: solid 5px #cc0000;
+}
+
 #intro-heading {
-    color: white;
+    color: #cc0000;
     font-size: 52px;
     font-weight: 750;
     cursor: text;
-    line-height: 7vh;
 }
 
-#intro-text {
+#intro-sub {
     color: white;
-    font-size: 18px;
-    font-weight: 750;
+    font-size: 22px;
+    font-weight: 500;
     cursor: text;
-    margin-top: 2vh;
 }
 
 #intro-button {
-    color: #FC3A79;
+    color: #FFFFFF;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     border-radius: 12px;
     border: none;
     padding: 8px 20px;
     margin-top: 20px;
-    background-color: #FFFF4F;
+    background-color: #cc0000;
     pointer-events: auto;
 }
 
 #intro-button:hover {
-    background-color: #FC3A79;
-    color: #FFFF4F;
+    background-color: #990000;
+    font-weight: 600;
+    color: #cccccc;
 }
 
 /* Section Headings */
@@ -120,6 +124,10 @@ a:link {
     background-repeat: no-repeat;
 }
 
+#bio {
+    width: 40%;
+}
+
 #bio-heading {
     color: #FFFF4F;
     font-size: 28px;
@@ -140,6 +148,7 @@ a:link {
     transition: 0.3s;
     height: 350px;
     width: 350px;
+    padding: 5vh
 }
 
 #bio-content {
@@ -150,6 +159,17 @@ a:link {
     transition: 0.3s;
     border-radius: 12px;
     padding: 5vh;
+}
+
+#bio-text-lg {
+    font-size: 20px; 
+    font-weight: 750;
+    padding-bottom: 2vh;
+}
+
+#bio-text label {
+    color: #FFFF4F; 
+    font-weight: 750;
 }
 
 /* Skills Section */

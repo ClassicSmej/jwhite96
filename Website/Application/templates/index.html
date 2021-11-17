@@ -14,16 +14,16 @@
             </div>
         </nav>
         <div id="intro">
-            <div id="intro-heading">
-                <label id="intro-welcome">Hi there, I'm</label><br>
-                <label style="color: #FFFF4F;">James White</label>
+            <div id="intro-text">
+                <div id="intro-heading">James White</div>
+                <div id="intro-sub">AWS Cloud Specialist</div>
             </div>
-            <div id="intro-text">Some Text Here</div>
             <button id="intro-button" onclick="document.location='#about'">ABOUT ME</button>
         </div>
         <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
 
+    <!-- About Section -->
     <div id="about">
         <nav id="navbar">
             <div id="nav-items">
@@ -36,54 +36,57 @@
         </nav>
         <div class="row h-100">
             <div id="bio-col" class="col">
-                <div style="padding: 5vh;">
+                <div>
                     <img src="{% static '' %}" alt="Image Not Found">
                 </div>
-                <div id="bio" style="width: 40%">
+                <div id="bio">
                     <div id="bio-content">
                         <div id="bio-heading">
                             About Me
                         </div>
-                        <p style="padding-top: 2vh">
-                            <label style="font-size: 20px; font-weight: 750">I'm James, a Cyber Security graduate from
+                        <p id="bio-text">
+                            <div id="bio-text-lg">I'm James, a Cyber Security graduate from
                                 the University of
-                                Plymouth currently looking to secure roles in Python and Django Development.</label>
-                            <br><br>
-                            I've been working in logistics for over eight years but wanted more of challenge for my
-                            future
-                            career. That's when I stumbled across Cisco Networking and it immediately sparked my
-                            interest. I
-                            self-taught myself the CCNA syllabus and passed the Cisco CCENT exam before
-                            university.
-                            <br><br>
-                            During my final year I loved working with Python and Django to build websites. I
-                            self-studied
-                            <label style="color: #FFFF4F; font-weight: 750">Python, HTML, CSS, JS, JQuery and the Django
+                                Plymouth currently looking to secure roles in Python and Django Development.
+                            </div>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien tortor, consectetur rutrum
+                            accumsan eu, vehicula sit amet magna. Aenean vitae placerat nunc. Phasellus ornare gravida dolor, et
+                            venenatis sapien vulputate a. Morbi sed mauris quam. Aliquam lobortis turpis at tellus interdum, id
+                            fermentum arcu scelerisque. In tincidunt neque vitae ante tincidunt, quis ultricies ante porttitor.
+                            Fusce massa purus, ullamcorper nec volutpat ac, tincidunt ut ex. Vestibulum id turpis varius,
+                            malesuada elit quis, pharetra velit. Quisque eros enim, rutrum id dapibus nec, rhoncus at lectus.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non vestibulum turpis.
+                        </p>
+                        <p id="bio-text">
+                            Integer ut justo ac ex facilisis facilisis vitae a leo.
+                            <label>Python, HTML, CSS, JS, JQuery and the Django
                                 Web Framework</label> and have since built multiple Django
-                            sites for myself including my final year project and this website.<br>
+                            sites for myself including my final year project and this website.
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
+    <!-- Skills Section -->
     <div id="skills">
         <div id=skills-container>
             <div id="skills-row" class="row h-100">
-                
+
             </div>
         </div>
         <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
 
+    <!-- Work Section -->
     <div id="work">
 
     </div>
 
+    <!-- Project Section -->
     <div id="projects">
-        
+
         <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
 
