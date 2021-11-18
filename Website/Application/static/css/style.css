@@ -30,21 +30,15 @@ a:link {
 }
 
 #nav-link {
-    color: #F40206;
+    color: #666666;
     font-size: 18px;
-    padding: 4vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
     font-weight: bold;
 }
 
 #nav-link:hover {
-    color: #ffffff;
-}
-
-#nav-link-active {
-    color: #ffffff;
-    font-size: 18px;
-    padding: 4vh;
-    font-weight: bold;
+    color: #FFFFFF;
 }
 
 /* Home Section */
