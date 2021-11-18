@@ -13,27 +13,35 @@ a:link {
     text-decoration: none;
 }
 
+.col-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Navbar */
 #navbar {
     top: 0;
     width: 100%;
     text-align: center;
-    padding: 4vh 4vh 0vh 4vh;
+    padding: 4vh 4vh 4vh 4vh;
+    z-index: 1;
+    position: absolute;
 }
 
 #nav-link {
-    color: white;
+    color: #F40206;
     font-size: 18px;
     padding: 4vh;
     font-weight: bold;
 }
 
 #nav-link:hover {
-    color: #FFFF4F;
+    color: #ffffff;
 }
 
 #nav-link-active {
-    color: #FFFF4F;
+    color: #ffffff;
     font-size: 18px;
     padding: 4vh;
     font-weight: bold;
@@ -41,7 +49,7 @@ a:link {
 
 /* Home Section */
 #home {
-    background-image: url("../images/synthwave.png");
+    background-color: #181818;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -50,40 +58,14 @@ a:link {
     background-repeat: no-repeat;
 }
 
-#bg-bottom {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-}
-
-#intro {
-    top: 0;
-    width: 67%;
-    position: fixed;
-    padding-top: 16vh;
-    padding-left: 30vw;
-    text-align: left;
-    pointer-events: none;
-}
-
-#intro-text {
-    padding-left: 2vh;
-    border-left: solid 5px #cc0000;
-}
-
-#intro-heading {
-    color: #cc0000;
-    font-size: 52px;
-    font-weight: 750;
-    cursor: text;
-}
-
-#intro-sub {
+#app {
     color: white;
-    font-size: 22px;
+    font-size: 120px;
     font-weight: 500;
+    padding-bottom: 10vh;
     cursor: text;
+    position: fixed;
+    pointer-events: none;
 }
 
 #intro-button {
@@ -94,12 +76,12 @@ a:link {
     border: none;
     padding: 8px 20px;
     margin-top: 20px;
-    background-color: #cc0000;
+    background-color: #F40206;
     pointer-events: auto;
 }
 
 #intro-button:hover {
-    background-color: #990000;
+    background-color: #C90101;
     font-weight: 600;
     color: #cccccc;
 }
@@ -115,7 +97,7 @@ a:link {
 
 /* About Section */
 #about {
-    background-color: #170829;
+    background-color: #fc1d33;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -125,20 +107,15 @@ a:link {
 }
 
 #bio {
+    z-index: 1;
     width: 40%;
 }
 
 #bio-heading {
-    color: #FFFF4F;
+    color: #FFFFFF;
     font-size: 28px;
     font-weight: 750;
-    border-bottom: solid 2px #FFFF4F;
-}
-
-#bio-col {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-bottom: solid 2px #FFFFFF;
 }
 
 #bio-col img {
@@ -168,13 +145,13 @@ a:link {
 }
 
 #bio-text label {
-    color: #FFFF4F; 
+    color: #F40206; 
     font-weight: 750;
 }
 
 /* Skills Section */
 #skills {
-    background-image: url("../images/synthwave.png");
+    background-color: #99C6E5;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -188,8 +165,6 @@ a:link {
     align-items: center;
     justify-content: center;
 }
-
-
 
 /* Work Section */
 #work {

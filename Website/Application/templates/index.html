@@ -3,39 +3,17 @@
 {% block body %}
 
     <div id="home">
-        <!-- Navbar -->
-        <nav id="navbar">
-            <div id="nav-items">
-                <a id="nav-link-active" href="#home">Home</a>
-                <a id="nav-link" href="#about">About</a>
-                <a id="nav-link" href="#skills">Skills</a>
-                <a id="nav-link" href="#work">Work</a>
-                <a id="nav-link" href="#projects">Projects</a>
+        <div class="row h-100">
+            <div class="col col-center" id="intro-col">
+                <div id="app"></div>
             </div>
-        </nav>
-        <div id="intro">
-            <div id="intro-text">
-                <div id="intro-heading">James White</div>
-                <div id="intro-sub">AWS Cloud Specialist</div>
-            </div>
-            <button id="intro-button" onclick="document.location='#about'">ABOUT ME</button>
         </div>
-        <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
 
     <!-- About Section -->
     <div id="about">
-        <nav id="navbar">
-            <div id="nav-items">
-                <a id="nav-link" href="#home">Home</a>
-                <a id="nav-link-active" href="#about">About</a>
-                <a id="nav-link" href="#skills">Skills</a>
-                <a id="nav-link" href="#work">Work</a>
-                <a id="nav-link" href="#projects">Projects</a>
-            </div>
-        </nav>
         <div class="row h-100">
-            <div id="bio-col" class="col">
+            <div class="col col-center" id="bio-col">
                 <div>
                     <img src="{% static '' %}" alt="Image Not Found">
                 </div>
@@ -45,9 +23,7 @@
                             About Me
                         </div>
                         <p id="bio-text">
-                            <div id="bio-text-lg">I'm James, a Cyber Security graduate from
-                                the University of
-                                Plymouth currently looking to secure roles in Python and Django Development.
+                            <div id="bio-text-lg">I'm James, an AWS Cloud Specialist at GoDeploy Labs.
                             </div>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien tortor, consectetur rutrum
                             accumsan eu, vehicula sit amet magna. Aenean vitae placerat nunc. Phasellus ornare gravida dolor, et
@@ -76,7 +52,6 @@
 
             </div>
         </div>
-        <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
 
     <!-- Work Section -->
@@ -89,5 +64,7 @@
 
         <img id="bg-bottom" src="{% static 'images/bg-bottom.png' %}">
     </div>
+
+    <script src="{% static 'js/typer.js' %}" type="text/javascript" lang="javscript"></script>
 
 {% endblock %}
