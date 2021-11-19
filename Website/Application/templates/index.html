@@ -2,17 +2,9 @@
     {% load static %}
     {% block body %}
 
-    <div id="home">
+    <div id="home" class="section">
         <!-- Navbar -->
-        <nav id="navbar">
-            <div id="nav-items">
-                <a id="nav-link" href="#home">Home</a>
-                <a id="nav-link" href="#about">About</a>
-                <a id="nav-link" href="#skills">Skills</a>
-                <a id="nav-link" href="#projects">Projects</a>
-                <a id="nav-link" href="#contact">Contact</a>
-            </div>
-        </nav>
+
         <div class="container">
             <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" fill="#404040" class="bi bi-cloud cloud"
                 viewBox="0 0 16 16">
@@ -34,7 +26,7 @@
     </div>
 
     <!-- About Section -->
-    <div id="about">
+    <div id="about" class="section">
         <div class="container">
             <!--<div class="heading">About Me</div>-->
                 <div class="accordion">
@@ -97,23 +89,23 @@
         </div>
 
         <!-- Skills Section -->
-        <div id="skills">
+        <div id="skills" class="section">
             <div class="container">
 
             </div>
         </div>
 
         <!-- Project Section -->
-        <div id="projects">
+        <div id="projects" class="section">
 
         </div>
 
         <!-- Contact Section -->
-        <div id="contact">
+        <div id="contact" class="section">
 
         </div>
 
         <script src="{% static 'js/typer.js' %}" type="text/javascript" lang="javscript"></script>
         <script src="{% static 'js/accordion.js' %}" type="text/javascript" lang="javscript"></script>
-
+        
         {% endblock %}

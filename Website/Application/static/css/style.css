@@ -25,7 +25,7 @@ a:link {
 
 #nav-link {
     color: #666666;
-    font-size: 18px;
+    font-size: 20px;
     padding-left: 4vh;
     padding-right: 4vh;
     font-weight: bold;
@@ -61,6 +61,7 @@ a:link {
     pointer-events: none;
 }
 
+/* TypeWriter */
 #app {
     color: white;
     font-size: 120px;
@@ -70,6 +71,33 @@ a:link {
     pointer-events: none;
 }
 
+.Typewriter__cursor {
+    -webkit-animation: Typewriter-cursor 1s infinite;
+    animation: Typewriter-cursor 1s infinite;
+    margin-left: 1px;
+}
+
+#writer1 {
+    color: #fc1d33;
+}
+
+#writer2 {
+    color: #d7e61a;
+}
+
+#writer3 {
+    color: #99C6E5;
+}
+
+#writer4 {
+    color: #9CE6AF;
+}
+
+#writer5 {
+    color: #B299E6;
+}
+
+/* Explore Button */
 #explore {
     color: #666666;
     position: fixed;
@@ -82,6 +110,7 @@ a:link {
 #explore label{
     opacity: 0.0;
     color: #666666;
+    font-weight: bold;
     transition: 0.30s ease-in;
 }
 
@@ -125,9 +154,8 @@ a:link {
 /* Accordion */
 .accordion {
     color: white;
-    width: 50%;
-    max-width: 50%;
-    margin: 2vh;
+    width: 60%;
+    max-width: 60%;
 }
 
 .accordion-item {
