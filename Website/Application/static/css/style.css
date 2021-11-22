@@ -18,7 +18,7 @@ a:link {
     top: 0;
     width: 100%;
     text-align: center;
-    padding: 4vh 4vh 4vh 4vh;
+    padding: 4vh;
     z-index: 1;
     position: absolute;
 }
@@ -26,8 +26,7 @@ a:link {
 #nav-link {
     color: #666666;
     font-size: 20px;
-    padding-left: 4vh;
-    padding-right: 4vh;
+    padding: 0 4vh 0 4vh;
     font-weight: bold;
     transition: 0.20s ease-in;
 }
@@ -45,8 +44,8 @@ a:link {
     justify-content: center;
 }
 
-/* Home Section */
-#home {
+/* Section */
+.section {
     background-color: #181818;
     width: 100%;
     height: 100vh;
@@ -56,6 +55,7 @@ a:link {
     background-repeat: no-repeat;
 }
 
+/* Home Section */
 .cloud {
     position: fixed;
     pointer-events: none;
@@ -72,11 +72,11 @@ a:link {
 }
 
 .Typewriter__cursor {
-    -webkit-animation: Typewriter-cursor 1s infinite;
-    animation: Typewriter-cursor 1s infinite;
     margin-left: 1px;
+    animation: Typewriter-cursor 1s infinite;
 }
 
+/* I HATE THIS!! */
 #writer1 {
     color: #fc1d33;
 }
@@ -141,17 +141,6 @@ a:link {
 }
 
 /* About Section */
-#about {
-    background-color: #181818;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-}
-
-/* Accordion */
 .accordion {
     color: white;
     width: 60%;
@@ -170,7 +159,7 @@ a:link {
     transition: 0.20s ease-in;
 }
 
-.accordion-item-header:hover {
+.accordion-item-header:hover  {
     color: #666666;
 }
 
@@ -189,35 +178,60 @@ a:link {
     font-size: 22px;
 }
 
-/* Skills Section */
-#skills {
-    background-color: #181818;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+/* Skills Section */ 
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+    padding: 2vh;
+    cursor: pointer;
 }
 
-/* Projects Section */
-#projects {
-    background-color: #181818;
-    width: 100%;
-    height: 100vh;
+.flip-card-inner {
     position: relative;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 30px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
 }
 
-/* Contact Section */
-#contact {
-    background-color: #181818;
+.flip-card .flip-card-inner.flip {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    display: flex;
+    position: absolute;
     width: 100%;
-    height: 100vh;
-    position: relative;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #181818;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 0.30s ease-in;
+    color: white;
+    
+}
+
+.flip-card-front {
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+}
+
+.flip-card-front:hover {
+    color: #666666;
+    font-weight: bold;
+    border-top: solid 2px #666666;
+    border-bottom: solid 2px #666666;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    border-top: solid 2px #666666;
+    border-bottom: solid 2px #666666;
+    font-size: 20px;
 }
