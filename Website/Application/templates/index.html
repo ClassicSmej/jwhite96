@@ -27,7 +27,7 @@
     <!-- About Section -->
     <div id="about" class="section">
         <div class="container">
-            <!--<div class="heading">About Me</div>-->
+            <div class="heading" style="color: #fc1d33">About</div>
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-item-header">Biography</div>
@@ -91,44 +91,47 @@
     <!-- Skills Section -->
     <div id="skills" class="section">
         <div class="container">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                      <h1>Amazon Web<br>Services</h1>
-                  </div>
-                  <div class="flip-card-back">
-                    <!-- back-->Some text Here
-                  </div>
+            <h1 class="heading" style="color: #d7e61a">Skills</h1>
+            <div class="card-deck">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h1>Amazon Web<br>Services</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- back-->Some text Here
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <h1>Cisco<br>Networking</h1>
-                  </div>
-                  <div class="flip-card-back">
-                    <!-- back-->Some text Here
-                  </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h1>Cisco<br>Networking</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- back-->Some text Here
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <h1>Django Web Framework</h1>
-                  </div>
-                  <div class="flip-card-back">
-                    <!-- back-->Some text Here
-                  </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h1>Django Web Framework</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- back-->Some text Here
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <h1>Probably<br>Something Else</h1>
-                  </div>
-                  <div class="flip-card-back">
-                    <!-- back-->Some text Here
-                  </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h1>Probably<br>Something Else</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- back-->Some text Here
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,6 +140,7 @@
     <!-- Project Section -->
     <div id="projects" class="section">
         <div class="container">
+            <div class="heading" style="color: #99C6E5">Projects</div>
         </div>
     </div>
 
@@ -146,7 +150,7 @@
     </div>
 
     <script>
-        $('.flip-card .flip-card-inner').click(function(){
+        $('.flip-card .flip-card-inner').click(function () {
             $(this).toggleClass("flip");
         });
     </script>
