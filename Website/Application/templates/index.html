@@ -2,8 +2,9 @@
     {% load static %}
     {% block body %}
 
-    <div id="home" class="section">
-        <!-- Navbar -->
+    
+
+    <section id="home" class="section" data-label="Home">
         <div class="container">
             <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" fill="#404040" class="bi bi-cloud cloud"
                 viewBox="0 0 16 16">
@@ -22,10 +23,10 @@
                 </a>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- About Section -->
-    <div id="about" class="section">
+    <section id="about" class="section" data-label="About">
         <div class="container">
             <div class="heading" style="color: #fc1d33">About</div>
             <div class="accordion">
@@ -86,10 +87,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Skills Section -->
-    <div id="skills" class="section">
+    <section id="skills" class="section" data-label="Skills">
         <div class="container">
             <h1 class="heading" style="color: #d7e61a">Skills</h1>
             <div class="card-deck">
@@ -135,19 +136,19 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Project Section -->
-    <div id="projects" class="section">
+    <section id="projects" class="section" data-label="Projects">
         <div class="container">
             <div class="heading" style="color: #99C6E5">Projects</div>
         </div>
-    </div>
+    </section>
 
     <!-- Contact Section -->
-    <div id="contact" class="section">
+    <section id="contact" class="section" data-label="Contact">
 
-    </div>
+    </section>
 
     <script>
         $('.flip-card .flip-card-inner').click(function () {
@@ -155,6 +156,7 @@
         });
     </script>
 
+    <script src="{% static 'js/dotnav.js' %}" type="text/javascript" lang="javscript"></script>
     <script src="{% static 'js/typer.js' %}" type="text/javascript" lang="javscript"></script>
     <script src="{% static 'js/accordion.js' %}" type="text/javascript" lang="javscript"></script>
 

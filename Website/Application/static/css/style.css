@@ -3,7 +3,6 @@
 html, main, body {
     height: 100%;
     margin: 0;
-    overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: Arial !important;
 }
@@ -14,25 +13,46 @@ a:link {
 }
 
 /* Navbar */
-#navbar {
-    top: 0;
-    width: 100%;
-    text-align: center;
-    padding: 4vh;
+.nav {
     z-index: 1;
-    position: absolute;
+    padding: 3vh;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-#nav-link {
-    color: #666666;
-    font-size: 20px;
-    padding: 0 4vh 0 4vh;
+.nav-item {
+    align-items: center;
+    display: flex;
+    margin-bottom: 2vh;
+    flex-direction: row-reverse;
+}
+
+.nav-link:hover ~ .nav-label {
+    opacity: 1;
+}
+
+.nav-label {
+    font-size: 18px;
     font-weight: bold;
-    transition: 0.20s ease-in;
+    color: white;
+    opacity: 0;
+    transition: 0.30s ease-in;
 }
 
-#nav-link:hover {
-    color: #FFFFFF;
+.nav-link {
+    background: #666666;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    transition: 0.30s ease-in;
+    margin-left: 15px;
+}
+
+.nav-link-selected {
+    background: white;
+    transform: scale(1.2);
 }
 
 /* Full Width/Height Container */
