@@ -14,21 +14,16 @@ function activateNavigation() {
     navContainer.classList.add("nav");
     navContainer.innerHTML = navItems.join("");
   
-    const observer = new IntersectionObserver(
-      (entries) => {
+    const observer = new IntersectionObserver((entries) => {
+
         document.querySelectorAll(".nav-link").forEach((navLink) => {
           navLink.classList.remove("nav-link-selected");
         });
   
         const visibleSection = entries.filter((entry) => entry.isIntersecting)[0];
   
-        document
-          .querySelector(
-            `.nav-item[data-for-section="${visibleSection.target.id}"] .nav-link`
-          )
-          .classList.add("nav-link-selected");
-      },
-      { threshold: 0.5 }
+        document.querySelector(`.nav-item[data-for-section="${visibleSection.target.id}"] .nav-link`).classList.add("nav-link-selected");
+      }, { threshold: 0.5 } 
     );
   
     sections.forEach((section) => observer.observe(section));
