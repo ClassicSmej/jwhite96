@@ -12,6 +12,16 @@ a:link {
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    padding: 5px;
+}
+
 /* Navbar */
 .nav {
     z-index: 1;
@@ -38,7 +48,7 @@ a:link {
     font-weight: bold;
     color: white;
     opacity: 0;
-    transition: 0.30s ease-in;
+    transition: 0.15s ease-in;
 }
 
 .nav-link {
@@ -46,7 +56,7 @@ a:link {
     border-radius: 50%;
     height: 15px;
     width: 15px;
-    transition: 0.30s ease-in;
+    transition: 0.15s ease-in;
     margin-left: 15px;
 }
 
@@ -57,6 +67,7 @@ a:link {
 
 .nav-link:hover {
     background: white;
+    transform: scale(1.2);
 }
 
 /* Full Width/Height Container */
@@ -79,6 +90,18 @@ a:link {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
+
+/* Section Headings */
+.heading {
+    top: 0;
+    position: absolute;
+    width: 50%;
+    margin: 10vh;
+    font-size: 52px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
 }
 
 /* Home Section */
@@ -154,23 +177,23 @@ a:link {
     color: #FFFFFF;
 }
 
-/* Section Headings */
-.heading {
-    top: 0;
-    position: absolute;
-    width: 50%;
-    margin: 10vh;
-    font-size: 52px;
-    font-weight: 750;
-    color: #FFFFFF;
-    text-align: center;
+/* About Section */
+#about .container {
+    flex-direction: row;
 }
 
-/* About Section */
+#about .heading {
+    width: 20%;
+    position: relative;
+    margin: 30vh;
+    font-size: 100px;
+    text-align: left;
+}
+
 .accordion {
     color: white;
-    width: 60%;
-    max-width: 60%;
+    width: 80%;
+    margin-right: 20vh;
 }
 
 .accordion-item {
@@ -178,7 +201,8 @@ a:link {
 }
 
 .accordion-item-header {
-    padding: 2vh;
+    padding: 3vh;
+    text-align: left;
     font-weight: bold;
     font-size: 42px;
     cursor: pointer;
@@ -195,12 +219,13 @@ a:link {
 
 .accordion-item-body {
     max-height: 0;
+    padding: 0;
     overflow: hidden;
     transition: max-height 0.15s ease-out;
 }
 
 .accordion-item-body-text {
-    padding: 0 2vh 2vh 2vh;
+    padding: 0 3vh 3vh 3vh;
     font-size: 22px;
 }
 
@@ -265,4 +290,41 @@ a:link {
     border-top: solid 2px #666666;
     border-bottom: solid 2px #666666;
     font-size: 20px;
+}
+
+/* Projects */
+
+/* Contact */
+#contact .container {
+    flex-direction: row;
+}
+
+#contact .heading {
+    position: relative;
+    margin: 30vh;
+    font-size: 100px;
+    text-align: center;
+}
+
+.col {
+    width: 50%;
+    text-align: center;
+    margin: 5vh;
+}
+
+#sites a {
+    color: #666666;
+    padding: 2vh;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.20s ease-in;
+}
+
+#sites a:hover {
+    color: #FFF;
+}
+
+#sites li {
+    text-align: left;
+    padding-bottom: 4vh;
 }
