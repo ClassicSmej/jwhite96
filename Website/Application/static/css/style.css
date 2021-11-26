@@ -55,6 +55,10 @@ a:link {
     transform: scale(1.2);
 }
 
+.nav-link:hover {
+    background: white;
+}
+
 /* Full Width/Height Container */
 .container {
     width: 100%;
