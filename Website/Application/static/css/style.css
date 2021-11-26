@@ -1,5 +1,6 @@
 /* Custom Stylesheet */
 
+/* Global */
 html, main, body {
     height: 100%;
     margin: 0;
@@ -18,8 +19,9 @@ ul {
     list-style-type: none;
 }
 
-li {
-    padding: 5px;
+.icon {
+    font-weight: bold;
+    padding: 10px;
 }
 
 /* Navbar */
@@ -98,7 +100,7 @@ li {
     position: absolute;
     width: 50%;
     margin: 10vh;
-    font-size: 52px;
+    font-size: 72px;
     font-weight: bold;
     color: #666666;
     text-align: center;
@@ -229,6 +231,20 @@ li {
     font-size: 22px;
 }
 
+#about ul {
+    padding-bottom: 15px;
+}
+
+.list-item {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.list-item span {
+    display: inline-flex;
+    align-items: center;
+}
+
 /* Skills Section */
 .card-deck {
     display: flex;
@@ -268,7 +284,7 @@ li {
     background-color: #181818;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    transition: 0.30s ease-in;
+    transition: 0.20s ease-in;
     color: white;
     
 }
@@ -293,6 +309,16 @@ li {
 }
 
 /* Projects */
+#projects .container {
+    flex-direction: row;
+}
+
+#projects .heading {
+    position: relative;
+    margin: 30vh;
+    font-size: 100px;
+    text-align: center;
+}
 
 /* Contact */
 #contact .container {
