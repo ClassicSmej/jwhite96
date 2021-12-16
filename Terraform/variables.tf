@@ -1,8 +1,8 @@
 variable "keys" {
     type = map
     default = {
-        "access" = "AKIATDEK35FN5622Z45Y"
-        "secret" = "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"
+        "access" = //access_key
+        "secret" = //secret_key
     }
 }
 
