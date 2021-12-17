@@ -4,6 +4,7 @@
 html, main, body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
     scroll-behavior: smooth;
     font-family: Arial !important;
 }
@@ -249,6 +250,7 @@ ul {
 .card-deck {
     display: flex;
     flex-direction: row;
+    max-width: 90%;
 }
 
 .flip-card {
