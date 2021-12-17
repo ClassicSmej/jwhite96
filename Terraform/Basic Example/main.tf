@@ -9,8 +9,7 @@ terraform {
 
 provider "aws" {
     region = var.regions[0]
-    access_key = var.keys["access"]
-    secret_key = var.keys["secret"]
+    profile = "default"
 }
 
 resource "aws_vpc" "vpc" {

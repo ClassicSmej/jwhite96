@@ -1,11 +1,3 @@
-variable "keys" {
-    type = map
-    default = {
-        "access" = //access_key
-        "secret" = //secret_key
-    }
-}
-
 variable regions {
     type = list(string)
     default = [
