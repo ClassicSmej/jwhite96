@@ -12,14 +12,14 @@ locals {
 }
 
 data "aws_ami" "ubuntu" {
-  most_recent = true
+    most_recent = true
 
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/*-amd64-server-*"]
-  }
+    filter {
+        name   = "name"
+        values = ["ubuntu/images/hvm-ssd/*-amd64-server-*"]
+    }
 
-  owners = ["099720109477"]
+    owners = ["099720109477"]
 }
 
 variable "instance_type" {
