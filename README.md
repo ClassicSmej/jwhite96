@@ -7,4 +7,4 @@ Experience with a variety of Cloud Platforms, including AWS, Azure and GCP. Fami
 Please feel free to take a look my repositories :smiley:
 
 ### Links:
-![Linkedin](https://bit.ly/3qd9ZnK)
+[**Linkedin**](https://www.linkedin.com/in/jamesw-white/)
