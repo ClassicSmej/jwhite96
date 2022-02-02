@@ -249,16 +249,6 @@ ul {
     color: #666666;
 }
 
-.cert {
-    padding-bottom: 10px;
-}
-
-.verify {
-    padding: 10px 0 10px 0
-}
-
-
-
 /* Skills Section */
 .card-deck {
     display: flex;
@@ -342,6 +332,7 @@ ul {
 
 .card:hover {
     transform: translateY(-10px);
+    box-shadow: #666666 0px 5px 15px 10px;
 }
 
 .card span {
