@@ -315,7 +315,7 @@ ul {
 }
 
 .flip-card-text {
-    width: 90%;
+    width: 95%;
 }
 
 /* Certifications */
@@ -332,7 +332,7 @@ ul {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: #666666 0px 5px 15px 10px;
+
 }
 
 .card span {
@@ -372,7 +372,7 @@ ul {
 
 #expired {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
     color: #de0a2a;
 }
 
