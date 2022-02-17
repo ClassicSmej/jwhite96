@@ -1,0 +1,101 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+
+    "Resources" : {
+        "LabVPC" : {
+            "Type" : "AWS::EC2::VPC",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "CidrBlock" : "10.0.0.0/16",
+                "EnableDnsHostnames": "true",
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "Lab-VPC"}
+                ]
+            }
+        },
+        
+        "LabSubnet" : {
+            "Type" : "AWS::EC2::Subnet",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "VpcId" : {"Ref" : "LabVPC"},
+                "CidrBlock" : "10.0.0.0/24",
+                "AvailabilityZone" : "us-east-1a",
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "Lab-Subnet"}
+                ]
+            }
+        },
+
+        "LabSG" : {
+            "Type" : "AWS::EC2::SecurityGroup",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "GroupDescription" : "Allow HTTP & SSH Access",
+                "GroupName" : "Lab Security Group",
+                "VpcId" : {"Ref" : "LabVPC"},
+                "SecurityGroupIngress" : [{
+                    "IpProtocol" : "tcp",
+                    "FromPort" : 80,
+                    "ToPort" : 80,
+                    "CidrIp" : "0.0.0.0/0"
+                },
+                {
+                    "IpProtocol" : "tcp",
+                    "FromPort" : 22,
+                    "ToPort" : 22,
+                    "CidrIp" : "0.0.0.0/0"
+                }],
+            }
+        },
+
+        "LabIGW" : {
+            "Type" : "AWS::EC2::InternetGateway",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "Lab-IGW"}
+                ]
+            }
+        },
+
+        "IGWAttachment" : {
+            "Type" : "AWS::EC2::VPCGatewayAttachment",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "InternetGatewayId" : { "Ref" : "LabIGW"},
+                "VpcId" : {"Ref" : "LabVPC"}
+            }
+        },
+
+        "RouteTable" : {
+            "Type" : "AWS::EC2::RouteTable",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "VpcId" : {"Ref" : "LabVPC"},
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "Lab-RT"}
+                ]
+            }
+        },
+
+        "SubnetRT" : {
+            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties" : {
+                "RouteTableId" : {"Ref" : "RouteTable"},
+                "SubnetId" : {"Ref" : "LabSubnet"}
+            }
+        },
+
+        "IGWRoute" : {
+            "Type" : "AWS::EC2::Route",
+            "DeletionPolicy" : "Delete",
+            "DependsOn" : "LabIGW",
+            "Properties" : {
+                "RouteTableId" : {"Ref" : "RouteTable"},
+                "DestinationCidrBlock" : "0.0.0.0/0",
+                "GatewayId" : {"Ref" : "LabIGW"}
+            }
+        }
+    }
+}
