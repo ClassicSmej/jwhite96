@@ -1,0 +1,202 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+
+    "Resources" : {
+        "VNET" : {
+            "Type" : "AWS::EC2::VPC",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "CidrBlock" : "10.0.0.0/16",
+                "EnableDnsHostnames": "true",
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "DevDept-vnet"}
+                ]
+            }
+        },
+
+        "SubnetA" : {
+            "Type" : "AWS::EC2::Subnet",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "VpcId" : {"Ref" : "VNET"},
+                "CidrBlock" : "10.0.0.0/24",
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "Subnet-a"}
+                ]
+            }
+        },
+
+        "SubnetB" : {
+            "Type" : "AWS::EC2::Subnet",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "VpcId" : {"Ref" : "VNET"},
+                "CidrBlock" : "10.0.1.0/24",
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "Subnet-b"}
+                ]
+            }
+        },
+
+        "IGW" : {
+            "Type" : "AWS::EC2::InternetGateway",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "DevDept-igw"}
+                ]
+            }
+        },
+
+        "IGWAttachment" : {
+            "Type" : "AWS::EC2::VPCGatewayAttachment",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "InternetGatewayId" : { "Ref" : "IGW"},
+                "VpcId" : {"Ref" : "VNET"}
+            }
+        },
+
+        "PublicRT" : {
+            "Type" : "AWS::EC2::RouteTable",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "VpcId" : {"Ref" : "VNET"},
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "DevDept-rtPubl"}
+                ]
+            }
+        },
+
+        "IGWRoute" : {
+            "Type" : "AWS::EC2::Route",
+            "DeletionPolicy" : "Delete",
+            "DependsOn" : "VNET",
+            "Properties" : {
+                "RouteTableId" : {"Ref" : "PublicRT"},
+                "DestinationCidrBlock" : "0.0.0.0/0",
+                "GatewayId" : {"Ref" : "IGW"}
+            }
+        },
+
+        "EIP" : {
+            "Type" : "AWS::EC2::EIP",
+            "DependsOn" : "IGWAttachment",
+            "Properties" : {
+                "Domain" : "vpc"
+            }
+        },
+
+        "NAT" : {
+          "Type" : "AWS::EC2::NatGateway",
+          "Properties" : {
+                "AllocationId" : { "Fn::GetAtt" : ["EIP", "AllocationId"]},
+                "SubnetId" : { "Ref" : "SubnetA" },
+                "Tags" : [ 
+                    {"Key" : "Name", "Value" : "DevDept-ngw"}
+                ]
+            }
+        },
+
+        "PrivateRT" : {
+            "Type" : "AWS::EC2::RouteTable",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "VpcId" : {"Ref" : "VNET"},
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "DevDept-rtPriv"}
+                ]
+            }
+        },
+
+        "NATRoute" : {
+            "Type" : "AWS::EC2::Route",
+            "DeletionPolicy" : "Delete",
+            "DependsOn" : "VNET",
+            "Properties" : {
+                "RouteTableId" : {"Ref" : "PrivateRT"},
+                "DestinationCidrBlock" : "0.0.0.0/0",
+                "NatGatewayId" : {"Ref" : "NAT"}
+            }
+        },
+
+        "SubnetART" : {
+            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties" : {
+                "RouteTableId" : {"Ref" : "PublicRT"},
+                "SubnetId" : {"Ref" : "SubnetA"}
+            }
+        },
+
+        "SubnetBRT" : {
+            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+            "Properties" : {
+                "RouteTableId" : {"Ref" : "PrivateRT"},
+                "SubnetId" : {"Ref" : "SubnetB"}
+            }
+        },
+
+        "LabSG" : {
+            "Type" : "AWS::EC2::SecurityGroup",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "GroupDescription" : "WebServer Access",
+                "GroupName" : "Lab Security Group",
+                "VpcId" : {"Ref" : "VNET"},
+                "SecurityGroupIngress" : [{
+                    "IpProtocol" : "tcp",
+                    "FromPort" : 80,
+                    "ToPort" : 80,
+                    "CidrIp" : "0.0.0.0/0"
+                },
+                {
+                    "IpProtocol" : "tcp",
+                    "FromPort" : 22,
+                    "ToPort" : 22,
+                    "CidrIp" : "0.0.0.0/0"
+                },
+                {
+                    "IpProtocol" : "tcp",
+                    "FromPort" : 443,
+                    "ToPort" : 443,
+                    "CidrIp" : "0.0.0.0/0"
+                }
+                ],
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "DevDept-sgSSH"}
+                ]
+            }
+        },
+
+        "WebServer1" : {
+            "Type" : "AWS::EC2::Instance",
+            "DeletionPolicy" : "Delete",
+            "Properties" : {
+                "ImageId" : "ami-01cc34ab2709337aa",
+                "InstanceType" : "t2.micro",
+                "NetworkInterfaces" : [{
+                    "AssociatePublicIpAddress": "true",
+                    "DeviceIndex": "0",
+                    "GroupSet": [{"Ref" : "LabSG"}],
+                    "SubnetId": {"Ref" : "SubnetA"}
+                }],
+                "Tags" : [
+                    {"Key" : "Name", "Value" : "DevDept-server01"}
+                ],
+
+                "UserData" : {
+                        "Fn::Base64": {
+                            "Fn::Join": ["", [
+                        "#!/bin/bash\n",
+                        "sudo yum update -y\n",
+                        "sudo yum install -y httpd\n",
+                        "sudo systemctl start httpd\n",
+                        "sudo systemctl enable httpd\n",
+                        "sudo echo '<!DOCTYPE html><html><head><title>DevDept-server01</title></head><body><h1>Hello Student!</h1><br><h2>Greetings from DevDept-server01</h2></body></html>' > /var/www/html/index.html"
+                        ]]
+                    }
+                }
+            }
+        }
+    }
+}
