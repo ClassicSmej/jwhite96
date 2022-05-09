@@ -1,0 +1,18 @@
+/* Custom Stylesheet */
+
+/* Global */
+html, main, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: Arial !important;
+}
+
+/* Section */
+section {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/bg-yellow.png);
+}
+

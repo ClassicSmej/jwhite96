@@ -332,7 +332,6 @@ ul {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: #666666 0px 5px 15px 10px;
 }
 
 .card span {
