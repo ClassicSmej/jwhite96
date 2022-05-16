@@ -1,11 +1,12 @@
 /* Custom Stylesheet */
 
-/* Global */
+/* -- Global -- */
 html, main, body {
     height: 100%;
     margin: 0;
     scroll-behavior: smooth;
     font-family: Arial !important;
+    overflow: auto;
 }
 
 /* Sections */
@@ -13,7 +14,7 @@ section {
     height: 100%;
 }
 
-#home, #work {
+#home, #work, #contact {
     background-color: #f3b70a;
 }
 
@@ -24,6 +25,11 @@ section {
     align-items: center;
 }
 
+.section-heading {
+    font-size: 80px;
+    font-weight: bold;
+}
+
 /* Grid */
 .grid-container {
     display: grid;
@@ -31,16 +37,22 @@ section {
     width: 100%;
     padding-left: 15vw;
     padding-right: 15vw;
+    align-items: center;
 }
 
-#home .grid-item-left {
-    padding: 50px 20px 50px 20px;
+.grid-item-left {
+    padding: 20px;
     text-align: left;
 }
 
 .grid-item-right {
     padding: 20px;
     text-align: right;
+}
+
+#home .grid-item-left {
+    padding: 50px 20px 50px 20px;
+    text-align: left;
 }
 
 /* Bottom Text */
@@ -62,6 +74,59 @@ section {
     background-color: #ffffff;
 }
 
+#skills .bottom-text {
+    background-color: #f3b70a;
+}
+
+#contact .bottom-text {
+    background-color: #ffffff;
+}
+
+/* Buttons */
+.btn-down {
+    color: black;
+    justify-items: center;
+    text-decoration: none;
+    border: solid 2px black;
+    padding: 20px 25px 20px 25px;
+    margin: 1vw;
+    position: relative;
+    z-index: 1;
+    transition: 250ms ease-in;
+}
+
+.btn-down::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: black;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 250ms ease-in;
+}
+
+.btn-down:hover::after {
+    transform: scaleY(1);
+    transform-origin: top;
+}
+
+.btn-down:hover {
+    color: white;
+}
+
+#contact .btn-down::after {
+    transform-origin: top;
+}
+
+#contact .btn-down:hover::after {
+    transform-origin: bottom;
+}
+
+/* -- Home Page -- */
 /* TypeWriter */
 #app {
     font-size: 84px;
@@ -95,7 +160,6 @@ section {
     width: 100%;
     height: 3px;
     background-color: currentColor;
-
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 250ms ease-in;
@@ -106,40 +170,26 @@ section {
     transform-origin: left;
 }
 
-/* Buttons */
-.btn-down {
-    color: black;
-    justify-items: center;
-    text-decoration: none;
-    border: solid 2px black;
-    padding: 20px 25px 20px 25px;
-    margin: 1vw;
-    position: relative;
-    z-index: 1;
 
+/* -- Contact Page -- */
+#sites a {
+    color: black;
+    font-size: 72px;
+    text-decoration: none;
     transition: 250ms ease-in;
 }
 
-.btn-down::after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-color: black;
-
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 250ms ease-in;
-}
-
-.btn-down:hover::after {
-    transform: scaleY(1);
-    transform-origin: top;
-}
-
-.btn-down:hover {
+#sites a:hover{
     color: white;
+}
+
+#sites li {
+    text-align: left;
+    list-style: none;
+    padding-bottom: 2vh;
+}
+
+#sites svg {
+    padding: 0 10px 2vh 0;
+    vertical-align: middle;
 }
