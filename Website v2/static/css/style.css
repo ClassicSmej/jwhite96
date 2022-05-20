@@ -6,7 +6,7 @@ html, main, body {
     margin: 0;
     scroll-behavior: smooth;
     font-family: Arial !important;
-    overflow: auto;
+    overflow: hidden;
 }
 
 /* Sections */
@@ -18,11 +18,13 @@ section {
     background-color: #f3b70a;
 }
 
+#about, #skills {
+    background-color: #f2f2f2;
+}
+
 .section-text {
     height: 75%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    overflow:hidden;
 }
 
 .section-heading {
@@ -33,26 +35,20 @@ section {
 /* Grid */
 .grid-container {
     display: grid;
-    grid-template-columns: auto max-content;
+    grid-template-columns: 60% 40%;
     width: 100%;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    height: 100%;
     align-items: center;
 }
 
 .grid-item-left {
-    padding: 20px;
     text-align: left;
+    padding-left: 15vw;
 }
 
 .grid-item-right {
-    padding: 20px;
     text-align: right;
-}
-
-#home .grid-item-left {
-    padding: 50px 20px 50px 20px;
-    text-align: left;
+    padding-right: 15vw;
 }
 
 /* Bottom Text */
@@ -62,24 +58,12 @@ section {
     padding: 10vh;
 }
 
-#home .bottom-text {
-    background-color: #ffffff;
-}
-
-#about .bottom-text {
+.bg-yellow {
     background-color: #f3b70a;
 }
 
-#work .bottom-text {
-    background-color: #ffffff;
-}
-
-#skills .bottom-text {
-    background-color: #f3b70a;
-}
-
-#contact .bottom-text {
-    background-color: #ffffff;
+.bg-white {
+    background-color: #f2f2f2;
 }
 
 /* Buttons */
@@ -170,6 +154,22 @@ section {
     transform-origin: left;
 }
 
+/* -- About Page -- */
+#about-text {
+    font-size: 28px;
+    padding: 4vh 8vh 4vh 8vh;
+    border-bottom: #f3b70a solid 4px;
+    border-top: #f3b70a solid 4px;
+}
+
+#introduction {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.skill-bold {
+    font-weight: bold;
+}
 
 /* -- Contact Page -- */
 #sites a {
