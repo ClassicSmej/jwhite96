@@ -6,7 +6,7 @@ html, main, body {
     margin: 0;
     scroll-behavior: smooth;
     font-family: Arial !important;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* Sections */
@@ -30,6 +30,7 @@ section {
 .section-heading {
     font-size: 80px;
     font-weight: bold;
+    cursor: text;
 }
 
 /* Grid */
@@ -56,6 +57,7 @@ section {
     font-size: 42px;
     text-align: right;
     padding: 10vh;
+    overflow: hidden;
 }
 
 .bg-yellow {
@@ -167,8 +169,36 @@ section {
     font-weight: bold;
 }
 
-.skill-bold {
+.bold {
     font-weight: bold;
+}
+
+/* --- Work Page --- */
+table {
+    border-collapse: collapse;
+    font-size: 32px;
+}
+
+td {
+    padding: 3vh;
+}
+
+td svg {
+    vertical-align: middle;
+    padding-left: 2px;
+    width: 32px;
+    height: 32px;
+}
+
+.td-left {
+    border-right: #f2f2f2 solid 4px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.company {
+    font-size: 28px;
+    color: #4d4d4d;
 }
 
 /* -- Contact Page -- */
@@ -180,7 +210,7 @@ section {
 }
 
 #sites a:hover{
-    color: white;
+    color: #f2f2f2;
 }
 
 #sites li {
@@ -190,6 +220,6 @@ section {
 }
 
 #sites svg {
-    padding: 0 10px 2vh 0;
+    padding: 0 0.5vw 2vh 0;
     vertical-align: middle;
 }
