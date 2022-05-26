@@ -28,7 +28,7 @@ section {
 }
 
 .section-heading {
-    font-size: 80px;
+    font-size: 4vw;
     font-weight: bold;
     cursor: text;
 }
@@ -54,7 +54,7 @@ section {
 
 /* Bottom Text */
 .bottom-text {
-    font-size: 42px;
+    font-size: 2.5vw;
     text-align: right;
     padding: 10vh;
     overflow: hidden;
@@ -74,11 +74,18 @@ section {
     justify-items: center;
     text-decoration: none;
     border: solid 2px black;
-    padding: 20px 25px 20px 25px;
+    padding: 2vh 2.8vh 2vh 2.8vh;
     margin: 1vw;
     position: relative;
     z-index: 1;
     transition: 250ms ease-in;
+}
+
+.btn-down svg {
+    padding: 0;
+    margin: 0;
+    width: 3.5vh;
+    height: 3.5vh;
 }
 
 .btn-down::after {
@@ -115,20 +122,19 @@ section {
 /* -- Home Page -- */
 /* TypeWriter */
 #app {
-    font-size: 84px;
+    font-size: 4.5vw;
     font-weight: 600;
     pointer-events: none;
 }
 
 .Typewriter__cursor {
-    margin-left: 1px;
     animation: Typewriter-cursor 1s infinite;
 }
 
 /* Nav List */
 .nav-list {
     list-style-type: none;
-    font-size: 42px;
+    font-size: 4.5vh;
 }
 
 .nav-item {
@@ -144,7 +150,7 @@ section {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 3px;
+    height: 0.35vh;
     background-color: currentColor;
     transform: scaleX(0);
     transform-origin: right;
@@ -158,14 +164,14 @@ section {
 
 /* -- About Page -- */
 #about-text {
-    font-size: 28px;
+    font-size: 1.5vw;
     padding: 4vh 8vh 4vh 8vh;
-    border-bottom: #f3b70a solid 4px;
-    border-top: #f3b70a solid 4px;
+    border-bottom: #f3b70a solid 0.5vh;
+    border-top: #f3b70a solid 0.5vh;
 }
 
 #introduction {
-    font-size: 36px;
+    font-size: 1.8vw;
     font-weight: bold;
 }
 
@@ -176,7 +182,7 @@ section {
 /* --- Work Page --- */
 table {
     border-collapse: collapse;
-    font-size: 32px;
+    font-size: 3.5vh;
 }
 
 td {
@@ -185,26 +191,26 @@ td {
 
 td svg {
     vertical-align: middle;
-    padding-left: 2px;
-    width: 32px;
-    height: 32px;
+    padding-left: 0.1vw;
+    width: 3.5vh;
+    height: 3.5vh;
 }
 
 .td-left {
-    border-right: #f2f2f2 solid 4px;
+    border-right: #f2f2f2 solid 0.2vw;
     text-align: right;
     font-weight: bold;
 }
 
 .company {
-    font-size: 28px;
+    font-size: 3vh;
     color: #4d4d4d;
 }
 
 /* -- Contact Page -- */
 #sites a {
     color: black;
-    font-size: 72px;
+    font-size: 8vh;
     text-decoration: none;
     transition: 250ms ease-in;
 }
@@ -222,4 +228,6 @@ td svg {
 #sites svg {
     padding: 0 0.5vw 2vh 0;
     vertical-align: middle;
+    width: 10vh;
+    height: 10vh;
 }
