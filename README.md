@@ -7,4 +7,5 @@ I'm passionate about creating web applications and building infrastructure in th
 Please feel free to take a look my repositories :smiley:
 
 ## Links:
+[**Personal Website**](http://jwhite42.com)
 [**Linkedin**](https://www.linkedin.com/in/jamesw-white/)
