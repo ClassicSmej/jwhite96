@@ -2,7 +2,7 @@
 
 A Cloud Specialist at Go Deploy Labs and Cyber Security graduate from the Universtiy of Plymouth. 
 
-I'm passionate about creating Web Applications and building infrastructure in the Cloud. Certified AWS Solutions Architect with proven experience working with the Cloud including **AWS**, **Azure** and **GCP**. Experience programming with **Python** and **JavaScript** as well as working with technologies such as **Terraform**, **React** and **Django**.
+I'm passionate about creating web applications and building infrastructure in the Cloud. Certified AWS Solutions Architect with proven experience working with the Cloud including **AWS**, **Azure** and **GCP**. Experience programming with **Python** and **JavaScript** as well as working with technologies such as **Terraform**, **React** and **Django**.
 
 Please feel free to take a look my repositories :smiley:
 
